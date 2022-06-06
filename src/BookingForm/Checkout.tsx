@@ -10,7 +10,7 @@ function Checkout() {
   
 
 
-  function handleFormSubmit(e) {
+  function handleFormSubmit(e: React.ChangeEvent<any>) {
     e.preventDefault();
     if (!name || !email || !phone || !address) {
       setFlag(true);
@@ -64,7 +64,6 @@ function Checkout() {
                 <input
                   type="text"
                   pattern="[6-9]{1}[0-9]{9}"
-                  maxlength="10"
                   title="Mobile number must start with 6-9 and consist of 10 digit"
                   className="form-control"
                   placeholder="Enter contact no"
